@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="StockManagementApp">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <title>Stock Management</title>
+</head>
+<body ng-cloak>
+    <base href="/">
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+    <!-- ANGULAR LIBRARIES -->
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/lib/angular/angular-route.min.js"></script>
+
+    <!-- APPLICATION/CONFIG FILES -->
+    <script src="js/StockManagementApp.js"></script>
+    <script src="js/Constants.js"></script>
+    <script src="js/RouteConfig.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="js/controllers/StockManagementListController.js"></script>
+    <script src="js/controllers/StockManagementDetailsController.js"></script>
+    <script src="js/controllers/StockManagementEditController.js"></script>
+    <script src="js/controllers/StockManagementCreateController.js"></script>
+    <script src="js/controllers/StockManagementHistoryController.js"></script>
+	<!-- SERVICES -->
+    <script src="js/services/StockManagementService.js"></script>    
+</body>
+</html>

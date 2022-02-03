@@ -1,0 +1,49 @@
+﻿<div>    
+    <h1>{{title}}</h1>
+	<a href='/stockcreate/' ><button class='btn btn-primary'>Create</button></a>
+	<table class='table table-striped'>
+		<thead>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th>Name</th>
+			<th>LicensePlate</th>			
+			<th>Location</th>			
+			<th>quantity</th>			
+			<th>status</th>	
+		</thead>		
+		<tbody>
+			<tr ng-repeat="item in inventoryList"  >
+				<td>
+					<a href={{'/stockdetails/'+item.id}} ><button class='btn btn-info'>Details</button></a>
+				</td>
+				<td>
+					<a href={{'/stockhistory/'+item.id}} ><button class='btn btn-secondary'>History</button></a>
+				</td>
+				<td>
+					<a href={{'/stockedit/'+item.id}} ><button class='btn btn-warning'>Edit</button></a>
+				</td>
+				<td>
+					<button class='btn btn-danger' ng-click = 'delete(item.id)'>Delete</button>
+				</td>
+				<td>
+					{{item.item}}
+				</td>
+				<td>
+					{{item.licensePlate}}
+				</td>
+				<td>
+					{{item.location}}
+				</td>
+				<td>
+					{{item.quantity}}
+				</td>
+				<td>
+					{{item.status}}
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>

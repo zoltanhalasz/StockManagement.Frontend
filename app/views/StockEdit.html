@@ -1,0 +1,48 @@
+﻿<div>
+	<div class='row'>
+		<h1>{{title}}</h1>
+	</div>
+	<form name="form" class='form-group'>
+		<label>Item:
+			<input type="text" ng-model="inventory.item" required="" class="form-control" />
+		</label>
+		<br />
+		<label>LicensePlate:
+			<input type="text" ng-model="inventory.licensePlate" required="" class="form-control" />
+		</label>
+		<br />
+		<label for="Country"> CountryOfOrigin: </label><br>
+		<select name="Country" ng-model="inventory.countryOfOrigin" class="custom-select col-md-2">
+		  <option value="romania">Romania</option>
+		  <option value="germany">Germany</option>
+		  <option value="albania">Albania</option>
+		  <option value="other">Other</option>
+		</select>	
+		<br />		
+		<label for="Status"> Status: </label><br>
+		<select name="Status" ng-model="inventory.status" class="custom-select col-md-2">
+		  <option value="closed">closed</option>
+		  <option value="available">available</option>
+		</select>	
+		<br />
+		<label>Expirydate:
+			<input type="date" ng-model="expiryDate" required="" class="form-control" placeholder="yyyy-MM-dd" min="2020-01-01" max="2030-12-31" required  />
+		</label>
+		<br />
+		<label>Location:
+			<input type="text" ng-model="inventory.location" required="" class="form-control" />
+		</label>
+		<br />
+		<label>Batch:
+			<input type="text" ng-model="inventory.batch" required="" class="form-control" />
+		</label>
+		<br />
+		<label>Quantity:
+			<input type="number" ng-model="inventory.quantity" required="" class="form-control" />
+		</label>
+		<br />
+		<input type="button" ng-click="reset(form)" value="Reset" class='btn btn-secondary' />
+		<input type="submit" ng-click="submit(inventory)" value="Save" class='btn btn-primary' />
+		<input type="button" ng-click="goBack()" value="Cancel" class='btn btn-warning' />
+	</form>
+</div>

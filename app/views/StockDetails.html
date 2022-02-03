@@ -1,0 +1,61 @@
+﻿<div>
+	<div class='row'>
+		<button class='btn btn-secondary' ng-click = "goBack()">Back</button>
+		<a href={{'/stockedit/'+inventory.id}} ><button class='btn btn-warning'>Edit</button></a>
+		<h1>{{title}}</h1>
+	</div>
+    
+	<table class='table table-striped'>
+		<thead>
+			<th>Id</th>
+			<th>LicensePlate</th>
+			<th>Item</th>
+			<th>CountryOfOrigin</th>
+		</thead>		
+		<tbody>
+			<tr >
+				<td>
+					{{inventory.id}}
+				</td>
+				<td>
+					{{inventory.licensePlate}}
+				</td>
+				<td>
+					{{inventory.item}}
+				</td>
+				<td>
+					{{inventory.countryOfOrigin}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class='table table-striped'>
+		<thead>
+			<th>Quantity</th>
+			<th>ExpiryDate</th>
+			<th>Location</th>
+			<th>Status</th>
+			<th>Batch</th>
+		</thead>		
+		<tbody>
+			<tr >
+				<td>
+					{{inventory.quantity}}
+				</td>
+				<td>
+					{{inventory.expiryDate}}
+				</td>
+				<td>
+					{{inventory.location}}
+				</td>
+				<td>
+					{{inventory.status}}
+				</td>
+				<td>
+					{{inventory.batch}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
